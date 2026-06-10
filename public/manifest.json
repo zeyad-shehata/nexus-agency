@@ -1,0 +1,16 @@
+{
+  "name": "Nexus Agency",
+  "short_name": "Nexus",
+  "description": "Premium digital experiences. We design and develop world-class websites, mobile apps, and brands.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06060b",
+  "theme_color": "#7c5cfc",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
