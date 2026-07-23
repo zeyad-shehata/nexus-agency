@@ -1,5 +1,5 @@
 // ============================================
-// NEXUS AGENCY — Book Consultation
+// NEXUS AGENCY  Book Consultation
 // ============================================
 
 export function renderConsultation() {
@@ -23,7 +23,7 @@ export function renderConsultation() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Book a Consultation</span>
+          <span class="section-label reveal">? Book a Consultation</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Let's <span class="gradient-text">Talk</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Schedule a free consultation to discuss your project.</p>
         </div>
@@ -84,7 +84,7 @@ export function renderConsultation() {
             <textarea class="form-textarea form-input" placeholder="Brief description..." style="min-height:80px;"></textarea>
           </div>
           <button class="btn btn-primary btn-large btn-shimmer" style="width:100%;justify-content:center;" onclick="bookConsultation()">
-            Book Consultation →
+            Book Consultation ?
           </button>
         </div>
 

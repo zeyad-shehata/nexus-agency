@@ -1,5 +1,5 @@
 // ============================================
-// NEXUS AGENCY — Theme Manager
+// NEXUS AGENCY  Theme Manager
 // ============================================
 
 export function initTheme() {

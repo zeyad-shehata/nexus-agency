@@ -1,6 +1,6 @@
 // ============================================
-// NEXUS AGENCY — Contact Page
-// Premium Edition v2.0 — Animated map + toast
+// NEXUS AGENCY  Contact Page
+// Premium Edition v2.0  Animated map + toast
 // ============================================
 
 export function renderContact() {
@@ -9,7 +9,7 @@ export function renderContact() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Get in Touch</span>
+          <span class="section-label reveal">? Get in Touch</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Contact <span class="gradient-text">Us</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Have a question or want to start a project? We'd love to hear from you.</p>
         </div>
@@ -50,7 +50,7 @@ export function renderContact() {
           <div class="reveal reveal-delay-2">
             <div class="contact-info-cards">
               <div class="glass-card contact-info-card">
-                <div class="contact-info-icon">📧</div>
+                <div class="contact-info-icon">??</div>
                 <div class="contact-info-label">Email</div>
                 <div class="contact-info-value">hello@nexus.agency</div>
               </div>
@@ -67,7 +67,7 @@ export function renderContact() {
               <div class="glass-card contact-info-card">
                 <div class="contact-info-icon">🕐</div>
                 <div class="contact-info-label">Hours</div>
-                <div class="contact-info-value">Mon–Fri, 9am–6pm</div>
+                <div class="contact-info-value">MonFri, 9am6pm</div>
               </div>
             </div>
 
@@ -135,7 +135,7 @@ window.handleContactSubmit = async function(e) {
         <p style="color:var(--text-secondary);">Thank you, ${name}. We'll get back to you within 24 hours.</p>
       </div>
     `;
-    if (window.showToast) window.showToast('Message sent successfully! 🎉');
+    if (window.showToast) window.showToast('Message sent successfully! ??');
   } catch (err) {
     submitBtn.innerHTML = originalText;
     submitBtn.disabled = false;

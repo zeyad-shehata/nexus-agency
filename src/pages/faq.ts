@@ -1,13 +1,13 @@
-﻿// ============================================
-// NEXUS AGENCY â€” FAQ Page
-// Premium Edition v2.0 â€” with search filter
+// ============================================
+// NEXUS AGENCY â€ FAQ Page
+// Premium Edition v2.0 â€ with search filter
 // ============================================
 
 export function renderFAQ() {
   const categories = [
     {
       name: 'General',
-      icon: 'ðŸ“‹',
+      icon: 'ðŸ‹',
       faqs: [
         { q: 'What services does Nexus Agency offer?', a: 'We offer a comprehensive range of digital services including web development, mobile app development, e-commerce solutions, UI/UX design, graphic design, branding, AI solutions, and digital marketing.' },
         { q: 'How do I start a project with Nexus?', a: 'Simply fill out our "Start Your Project" form or contact us directly. We\'ll schedule a free consultation to discuss your needs and provide a detailed proposal.' },
@@ -16,18 +16,18 @@ export function renderFAQ() {
     },
     {
       name: 'Pricing',
-      icon: 'ðŸ’°',
+      icon: 'ðŸ°',
       faqs: [
         { q: 'How much does a website cost?', a: 'Website costs vary based on complexity and features. Simple landing pages start at $1,500, while complex web applications can range from $5,000 to $50,000+. Contact us for a free quote.' },
-        { q: 'What payment methods do you accept?', a: 'We accept bank transfers, credit cards, PayPal, and cryptocurrency. We offer flexible payment plans for larger projects â€” typically 50% upfront and 50% upon completion.' },
+        { q: 'What payment methods do you accept?', a: 'We accept bank transfers, credit cards, PayPal, and cryptocurrency. We offer flexible payment plans for larger projects â€ typically 50% upfront and 50% upon completion.' },
         { q: 'Is there a refund policy?', a: 'We offer a satisfaction guarantee. If you\'re not happy with the initial concept, we\'ll refund your deposit minus any work already completed. Detailed terms are in our contract.' },
       ]
     },
     {
       name: 'Process',
-      icon: 'ðŸ”„',
+      icon: 'ðŸ„',
       faqs: [
-        { q: 'What is your development process?', a: 'We follow an agile methodology: Discovery â†’ Planning â†’ Design â†’ Development â†’ Testing â†’ Launch â†’ Support. You\'ll be involved at every stage with regular updates and checkpoints.' },
+        { q: 'What is your development process?', a: 'We follow an agile methodology: Discovery â† Planning â† Design â† Development â† Testing â† Launch â† Support. You\'ll be involved at every stage with regular updates and checkpoints.' },
         { q: 'How long does a typical project take?', a: 'Timelines vary: Landing pages (1-2 weeks), websites (2-6 weeks), mobile apps (4-12 weeks), complex platforms (3-6 months). We\'ll provide a detailed timeline during the proposal phase.' },
         { q: 'How many revisions are included?', a: 'Our standard packages include 3-5 revision rounds per design phase. Additional revisions can be arranged at an hourly rate.' },
       ]
@@ -43,7 +43,7 @@ export function renderFAQ() {
     },
     {
       name: 'Technical',
-      icon: 'âš™ï¸',
+      icon: 'âšï¸',
       faqs: [
         { q: 'What technologies do you use?', a: 'We use modern, industry-standard technologies: React, Next.js, Vue, Node.js, Python, Flutter, React Native, and more. We choose the best stack based on your project\'s specific needs.' },
         { q: 'Will my website be mobile-responsive?', a: 'Every project we deliver is fully responsive and tested across all devices and browsers. Mobile-first design is a core part of our process.' },
@@ -68,7 +68,7 @@ export function renderFAQ() {
       <div class="container" style="max-width:800px;">
         <!-- Search -->
         <div class="faq-search reveal">
-          <span class="faq-search-icon">ðŸ”</span>
+          <span class="faq-search-icon">ðŸ</span>
           <input type="text" class="faq-search-input" placeholder="Search questions..." oninput="filterFAQ(this.value)" />
         </div>
 
@@ -83,7 +83,7 @@ export function renderFAQ() {
                 <div class="accordion-item faq-item" data-question="${f.q.toLowerCase()}" data-answer="${f.a.toLowerCase()}" onclick="this.classList.toggle('active');const b=this.querySelector('.accordion-body');b.style.maxHeight=this.classList.contains('active')?b.scrollHeight+'px':'0'">
                   <div class="accordion-header">
                     <span>${f.q}</span>
-                    <span class="accordion-icon">â–¼</span>
+                    <span class="accordion-icon">â¼</span>
                   </div>
                   <div class="accordion-body">
                     <div class="accordion-body-inner">${f.a}</div>
@@ -95,7 +95,7 @@ export function renderFAQ() {
         </div>
 
         <div id="faq-no-results" style="display:none;text-align:center;padding:var(--space-12) 0;">
-          <div style="font-size:3rem;margin-bottom:var(--space-4);">ðŸ¤”</div>
+          <div style="font-size:3rem;margin-bottom:var(--space-4);">ðŸ¤</div>
           <h3 style="font-size:var(--font-size-lg);font-weight:700;margin-bottom:var(--space-2);">No results found</h3>
           <p style="color:var(--text-secondary);">Try different keywords or <a href="./contact" data-link style="color:var(--accent-primary);">contact us</a> directly.</p>
         </div>
@@ -104,7 +104,7 @@ export function renderFAQ() {
           <div class="glass-card" style="padding:var(--space-12);">
             <h3 style="font-size:var(--font-size-xl);font-weight:700;margin-bottom:var(--space-3);">Still Have Questions?</h3>
             <p style="color:var(--text-secondary);margin-bottom:var(--space-6);">We're here to help. Reach out and we'll respond within 24 hours.</p>
-            <a href="./contact" class="btn btn-primary" data-link>Contact Us â†’</a>
+            <a href="./contact" class="btn btn-primary" data-link>Contact Us â†</a>
           </div>
         </div>
       </div>

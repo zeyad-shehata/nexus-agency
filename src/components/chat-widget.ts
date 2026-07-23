@@ -1,5 +1,5 @@
 // ============================================
-// NEXUS AGENCY — Live Chat Widget
+// NEXUS AGENCY  Live Chat Widget
 // ============================================
 
 import {
@@ -63,7 +63,7 @@ function formatTime(isoString) {
   return `${hours}:${minutes} ${ampm}`;
 }
 
-const COMMON_EMOJIS = ['😊', '👍', '🔥', '🚀', '🙌', '💡', '✨', '💻', '🎨', '💼', '👏', '🎉'];
+const COMMON_EMOJIS = ['??', '👍', '??', '??', '🙌', '??', '✨', '💻', '??', '??', '👏', '??'];
 
 export function initChatWidget() {
   // Prevent duplicate rendering
@@ -83,7 +83,7 @@ export function initChatWidget() {
     <!-- Floating Admin Toggle -->
     <button id="admin-sim-fab" class="admin-sim-fab" title="Open Admin Simulator Console" aria-label="Open Admin Simulator Console">
       <span class="admin-sim-badge" id="admin-sim-badge" style="display: none;">0</span>
-      🛠️ Admin
+      ??? Admin
     </button>
 
     <!-- Floating Client Button -->
@@ -153,7 +153,7 @@ export function initChatWidget() {
 
           <!-- Emoji Toggle -->
           <button type="button" id="chat-emoji-btn" class="chat-action-btn" aria-label="Insert emoji">
-            😊
+            ??
           </button>
 
           <!-- Send Button -->
@@ -334,7 +334,7 @@ export function initChatWidget() {
     });
 
     clientSocket.on('connect', () => {
-      console.log('⚡ Client connected to support socket.');
+      console.log('? Client connected to support socket.');
       if (activeConversationId) {
         clientSocket.emit('join_conversation', { conversationId: activeConversationId });
       }
@@ -780,11 +780,11 @@ function renderMessagesList() {
       } else {
         contentHtml = `
           <div class="chat-msg-file">
-            <span class="file-icon">📄</span>
+            <span class="file-icon">??</span>
             <div class="file-info">
               <span class="file-name">${sanitizeHTML(fileName)}</span>
             </div>
-            <a href="${fileUrl}" download target="_blank" class="file-download-btn">⬇️</a>
+            <a href="${fileUrl}" download target="_blank" class="file-download-btn">??</a>
           </div>
         `;
       }
@@ -838,12 +838,12 @@ function renderAdminMessages() {
       } else {
         contentHtml = `
           <div class="chat-msg-file">
-            <span class="file-icon">📄</span>
+            <span class="file-icon">??</span>
             <div class="file-info">
               <span class="file-name">${sanitizeHTML(msg.attachment.name)}</span>
               <span class="file-size">${msg.attachment.size}</span>
             </div>
-            <a href="${msg.attachment.url}" download class="file-download-btn">⬇️</a>
+            <a href="${msg.attachment.url}" download class="file-download-btn">??</a>
           </div>
         `;
       }

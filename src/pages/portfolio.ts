@@ -1,12 +1,12 @@
-﻿// ============================================
-// NEXUS AGENCY â€” Portfolio Page
-// Premium Edition v2.0 â€” with Lightbox
+// ============================================
+// NEXUS AGENCY â€ Portfolio Page
+// Premium Edition v2.0 â€ with Lightbox
 // ============================================
 
 const projectsData = [
   { title: 'Quantum Finance', cat: 'Web App', desc: 'A cutting-edge fintech platform with real-time analytics, AI-powered insights, and seamless payment processing.', tech: ['React', 'Node.js', 'AWS'], icon: 'ðŸ¦', metrics: '340% conversion increase', color: '#7c5cfc', client: 'FinEdge Capital', duration: '3 months', challenge: 'Building a real-time trading dashboard that handles 10K+ concurrent users with sub-second latency.' },
   { title: 'Verdant Health', cat: 'Mobile', desc: 'A comprehensive health and wellness app with AI-driven personalized recommendations and telemedicine.', tech: ['Flutter', 'Firebase', 'TensorFlow'], icon: 'ðŸ¥', metrics: '500K+ downloads', color: '#00d4aa', client: 'Verdant Health Inc.', duration: '4 months', challenge: 'Integrating HIPAA-compliant video calls with AI-powered health assessments.' },
-  { title: 'Luxe Fashion', cat: 'E-Commerce', desc: 'Premium fashion e-commerce with AR try-on, personalized styling, and global shipping integration.', tech: ['Next.js', 'Stripe', 'Sanity'], icon: 'ðŸ‘—', metrics: '250% revenue growth', color: '#ff6b9d', client: 'Luxe Retail Group', duration: '2.5 months', challenge: 'Creating a seamless AR try-on experience that works across all mobile browsers.' },
+  { title: 'Luxe Fashion', cat: 'E-Commerce', desc: 'Premium fashion e-commerce with AR try-on, personalized styling, and global shipping integration.', tech: ['Next.js', 'Stripe', 'Sanity'], icon: 'ðŸ', metrics: '250% revenue growth', color: '#ff6b9d', client: 'Luxe Retail Group', duration: '2.5 months', challenge: 'Creating a seamless AR try-on experience that works across all mobile browsers.' },
   { title: 'Neural Analytics', cat: 'AI', desc: 'An intelligent data analytics dashboard with predictive modeling and natural language querying.', tech: ['Python', 'React', 'TensorFlow'], icon: 'ðŸ§ ', metrics: '20hrs/week saved', color: '#ffa94d', client: 'NeuralWave AI', duration: '5 months', challenge: 'Training custom ML models on proprietary data while maintaining enterprise-grade security.' },
   { title: 'Bloom Beauty', cat: 'Branding', desc: 'Complete brand identity redesign for a luxury beauty brand including logo, packaging, and digital presence.', tech: ['Figma', 'Illustrator', 'After Effects'], icon: 'ðŸŒ¸', metrics: '180% brand awareness', color: '#e879f9', client: 'Bloom Beauty Co.', duration: '6 weeks', challenge: 'Maintaining brand heritage while creating a modern, Gen-Z appealing identity.' },
   { title: 'CloudSync Pro', cat: 'Web App', desc: 'Enterprise cloud management platform with automated deployment, monitoring, and cost optimization.', tech: ['Vue.js', 'Go', 'Kubernetes'], icon: 'â˜ï¸', metrics: '60% cost reduction', color: '#38bdf8', client: 'CloudSync Inc.', duration: '4 months', challenge: 'Building a multi-cloud orchestration layer that supports AWS, GCP, and Azure.' },
@@ -135,12 +135,12 @@ export async function initPortfolio() {
     </div>
     ${p.challenge ? `
       <div style="padding:var(--space-6);background:var(--bg-glass);border:1px solid var(--bg-glass-border);border-radius:var(--radius-lg);margin-bottom:var(--space-6);">
-        <h4 style="font-weight:700;margin-bottom:var(--space-2);font-size:var(--font-size-sm);">ðŸ’¡ The Challenge</h4>
+        <h4 style="font-weight:700;margin-bottom:var(--space-2);font-size:var(--font-size-sm);">ðŸ¡ The Challenge</h4>
         <p style="color:var(--text-secondary);font-size:var(--font-size-sm);line-height:var(--line-height-relaxed);">${p.challenge}</p>
       </div>
     ` : ''}
     <div style="text-align:center;">
-      <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start a Similar Project â†’</a>
+      <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start a Similar Project â†</a>
     </div>
   `;
 

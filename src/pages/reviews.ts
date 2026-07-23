@@ -1,6 +1,6 @@
 // ============================================
-// NEXUS AGENCY — Client Reviews Page
-// Premium Edition v2.0 — Rating breakdown
+// NEXUS AGENCY  Client Reviews Page
+// Premium Edition v2.0  Rating breakdown
 // ============================================
 
 const staticReviews = [
@@ -8,7 +8,7 @@ const staticReviews = [
   { name: 'Michael Chen', company: 'GrowthLab', initials: 'MC', rating: 5, text: 'Working with Nexus was the best investment we made for our startup. They delivered a beautiful, fast, and scalable platform that our users absolutely love. The communication was excellent throughout.', verified: true },
   { name: 'Emma Williams', company: 'Luxe Retail', initials: 'EW', rating: 5, text: 'The e-commerce platform they built for us is stunning. Sales increased 250% after launch. The team is professional, responsive, and truly cares about results.', verified: true },
   { name: 'David Park', company: 'NeuralWave AI', initials: 'DP', rating: 5, text: 'Their AI expertise is exceptional. They built a custom analytics dashboard that saves our team 20+ hours per week. Design is world-class and code quality is impeccable.', verified: true },
-  { name: 'Lisa Zhang', company: 'Bloom Beauty', initials: 'LZ', rating: 5, text: 'From branding to website to mobile app — Nexus handled everything flawlessly. True partners who understand business needs and translate them into beautiful products.', verified: true },
+  { name: 'Lisa Zhang', company: 'Bloom Beauty', initials: 'LZ', rating: 5, text: 'From branding to website to mobile app  Nexus handled everything flawlessly. True partners who understand business needs and translate them into beautiful products.', verified: true },
   { name: 'James Miller', company: 'FinEdge Capital', initials: 'JM', rating: 4, text: 'Great work on our fintech platform. The design is sleek and modern. Development was mostly on time with some minor delays, but the final product exceeded expectations.', verified: true },
   { name: 'Anna Kowalski', company: 'EcoMarket', initials: 'AK', rating: 5, text: 'The team delivered an incredible sustainable marketplace platform. The UX research they conducted was thorough, and it shows in the final product. Highly recommend!', verified: true },
   { name: 'Robert Singh', company: 'CloudSync Pro', initials: 'RS', rating: 5, text: 'Enterprise-grade quality at a fair price. Our cloud management dashboard is fast, reliable, and our team loves using it. Outstanding technical execution.', verified: true },
@@ -32,10 +32,10 @@ function renderReviewCard(r, i) {
           <div>
             <div style="font-weight:700;">${name}</div>
             <div style="font-size:var(--font-size-xs);color:var(--text-tertiary);">${company}</div>
-            ${verified ? '<div class="review-verified">✓ Verified Client</div>' : ''}
+            ${verified ? '<div class="review-verified">? Verified Client</div>' : ''}
           </div>
         </div>
-        <div class="stars">${'★'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
+        <div class="stars">${'?'.repeat(rating)}${'☆'.repeat(5 - rating)}</div>
       </div>
       <p class="review-text">${comment}</p>
     </div>
@@ -59,7 +59,7 @@ function renderRatingBreakdown(reviews) {
           const percent = total > 0 ? (count / total * 100) : 0;
           return `
             <div class="rating-bar-row">
-              <span class="rating-bar-label">${star}★</span>
+              <span class="rating-bar-label">${star}?</span>
               <div class="rating-bar-track">
                 <div class="rating-bar-fill" style="width:${percent}%;"></div>
               </div>
@@ -80,7 +80,7 @@ export function renderReviews() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Reviews</span>
+          <span class="section-label reveal">? Reviews</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Client <span class="gradient-text">Reviews</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Hear from our clients about their experience working with us.</p>
         </div>
@@ -94,7 +94,7 @@ export function renderReviews() {
           <div class="glass-card" style="text-align:center;padding:var(--space-6);">
             <div style="font-size:var(--font-size-3xl);font-weight:900;color:var(--accent-warm);">${avgRating}</div>
             <div class="stars" style="justify-content:center;margin:var(--space-2) 0;">
-              ${'★'.repeat(5)}
+              ${'?'.repeat(5)}
             </div>
             <div style="font-size:var(--font-size-sm);color:var(--text-secondary);">Average Rating</div>
           </div>
@@ -139,18 +139,18 @@ export async function initReviews() {
           <div class="form-group">
             <label class="form-label">Rating</label>
             <select id="review-rating" class="form-input" style="width: 160px;" required>
-              <option value="5">⭐⭐⭐⭐⭐ (5)</option>
-              <option value="4">⭐⭐⭐⭐ (4)</option>
-              <option value="3">⭐⭐⭐ (3)</option>
-              <option value="2">⭐⭐ (2)</option>
-              <option value="1">⭐ (1)</option>
+              <option value="5">????? (5)</option>
+              <option value="4">???? (4)</option>
+              <option value="3">??? (3)</option>
+              <option value="2">?? (2)</option>
+              <option value="1">? (1)</option>
             </select>
           </div>
           <div class="form-group">
             <label class="form-label">Review Comment</label>
             <textarea id="review-comment" class="form-textarea form-input" placeholder="Type your comment..." required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="margin-top: var(--space-2);">Submit Review →</button>
+          <button type="submit" class="btn btn-primary" style="margin-top: var(--space-2);">Submit Review ?</button>
         </form>
       </div>
     `;
@@ -168,7 +168,7 @@ export async function initReviews() {
         });
         if (!res.ok) throw new Error();
 
-        if ((window as any).showToast) (window as any).showToast('Review submitted! Awaiting approval. 🎉');
+        if ((window as any).showToast) (window as any).showToast('Review submitted! Awaiting approval. ??');
         (e.target as HTMLFormElement).reset();
       } catch (err) {
         if ((window as any).showToast) (window as any).showToast('Failed to submit review.', 'error');
@@ -184,6 +184,6 @@ export async function initReviews() {
       grid.innerHTML = dbReviews.map((r, i) => renderReviewCard(r, i)).join('');
     }
   } catch (e) {
-    console.warn('⚠️ Could not fetch reviews from API, falling back to static mock data.', e);
+    console.warn('?? Could not fetch reviews from API, falling back to static mock data.', e);
   }
 }

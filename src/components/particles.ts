@@ -1,5 +1,5 @@
 // ============================================
-// NEXUS AGENCY — Canvas Particle System
+// NEXUS AGENCY  Canvas Particle System
 // Lightweight ambient particle background
 // ============================================
 
@@ -84,7 +84,7 @@ export function initParticles() {
     animationId = requestAnimationFrame(draw);
   }
 
-  // Visibility API — pause when tab hidden
+  // Visibility API  pause when tab hidden
   document.addEventListener('visibilitychange', () => {
     isVisible = !document.hidden;
     if (isVisible) draw();

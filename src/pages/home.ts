@@ -1,5 +1,5 @@
-﻿// ============================================
-// NEXUS AGENCY â€” Home Page
+// ============================================
+// NEXUS AGENCY â€ Home Page
 // Premium Edition v2.0
 // ============================================
 
@@ -69,22 +69,22 @@ function heroSection() {
 
 function techTicker() {
   const techs = [
-    { icon: 'âš›ï¸', name: 'React' },
-    { icon: 'ðŸ”º', name: 'Next.js' },
-    { icon: 'ðŸ’š', name: 'Vue.js' },
-    { icon: 'ðŸŸ¦', name: 'TypeScript' },
-    { icon: 'ðŸ', name: 'Python' },
-    { icon: 'ðŸ”¥', name: 'Firebase' },
-    { icon: 'â˜ï¸', name: 'AWS' },
-    { icon: 'ðŸ¤–', name: 'TensorFlow' },
-    { icon: 'ðŸ“±', name: 'Flutter' },
-    { icon: 'ðŸŽ¨', name: 'Figma' },
-    { icon: 'ðŸ”·', name: 'Docker' },
-    { icon: 'âš¡', name: 'Node.js' },
-    { icon: 'ðŸ›¡ï¸', name: 'GraphQL' },
-    { icon: 'ðŸ”®', name: 'OpenAI' },
-    { icon: 'ðŸŒŠ', name: 'Tailwind' },
-    { icon: 'ðŸ—„ï¸', name: 'PostgreSQL' },
+    { icon: '??', name: 'React' },
+    { icon: '??', name: 'Next.js' },
+    { icon: '??', name: 'Vue.js' },
+    { icon: '??', name: 'TypeScript' },
+    { icon: '??', name: 'Python' },
+    { icon: '??', name: 'Firebase' },
+    { icon: '??', name: 'AWS' },
+    { icon: '??', name: 'TensorFlow' },
+    { icon: '??', name: 'Flutter' },
+    { icon: '??', name: 'Figma' },
+    { icon: '??', name: 'Docker' },
+    { icon: '?', name: 'Node.js' },
+    { icon: '??', name: 'GraphQL' },
+    { icon: '??', name: 'OpenAI' },
+    { icon: '??', name: 'Tailwind' },
+    { icon: '??', name: 'PostgreSQL' },
   ];
 
   const items = techs.map(t => `
@@ -108,7 +108,7 @@ function statsSection() {
     { count: 150, suffix: '+', label: 'Projects Completed', icon: 'ðŸš€' },
     { count: 120, suffix: '+', label: 'Happy Clients', icon: 'ðŸ˜Š' },
     { count: 8, suffix: '+', label: 'Years of Experience', icon: 'â­' },
-    { count: 99, suffix: '%', label: 'Client Satisfaction', icon: 'ðŸ’¯' },
+    { count: 99, suffix: '%', label: 'Client Satisfaction', icon: 'ðŸ¯' },
   ];
 
   return `
@@ -130,10 +130,10 @@ function statsSection() {
 
 function whyChooseUs() {
   const features = [
-    { icon: 'ðŸ‘¥', title: 'Professional Team', desc: 'Expert designers and developers with years of experience building world-class digital products.', color: 'var(--accent-primary-rgb)' },
+    { icon: 'ðŸ¥', title: 'Professional Team', desc: 'Expert designers and developers with years of experience building world-class digital products.', color: 'var(--accent-primary-rgb)' },
     { icon: 'âš¡', title: 'Fast Delivery', desc: 'We deliver projects on time without compromising on quality, using agile methodologies.', color: 'var(--accent-secondary-rgb)' },
-    { icon: 'ðŸ’Ž', title: 'Premium Quality', desc: 'Every pixel matters. We craft premium designs that stand out and drive real results.', color: 'var(--accent-tertiary-rgb)' },
-    { icon: 'ðŸ”’', title: 'Secure Process', desc: 'Enterprise-grade security practices to protect your data and your users throughout.', color: 'var(--accent-warm-rgb)' },
+    { icon: 'ðŸŽ', title: 'Premium Quality', desc: 'Every pixel matters. We craft premium designs that stand out and drive real results.', color: 'var(--accent-tertiary-rgb)' },
+    { icon: 'ðŸ', title: 'Secure Process', desc: 'Enterprise-grade security practices to protect your data and your users throughout.', color: 'var(--accent-warm-rgb)' },
     { icon: 'ðŸ› ï¸', title: 'Continuous Support', desc: 'We don\'t disappear after launch. Ongoing maintenance, updates, and 24/7 support.', color: 'var(--accent-cyan-rgb)' },
     { icon: 'ðŸ§ ', title: 'Modern Technologies', desc: 'Latest tech stack including AI, cloud-native, and cutting-edge frameworks.', color: 'var(--accent-primary-rgb)' },
   ];
@@ -162,14 +162,14 @@ function whyChooseUs() {
 
 function servicesPreview() {
   const services = [
-    { icon: 'ðŸŒ', name: 'Website Development', desc: 'Custom websites built with modern frameworks and best practices.' },
-    { icon: 'ðŸ“±', name: 'Mobile Applications', desc: 'Native and cross-platform apps for iOS and Android.' },
-    { icon: 'ðŸ›’', name: 'E-Commerce Stores', desc: 'Powerful online stores that convert visitors into customers.' },
-    { icon: 'ðŸŽ¨', name: 'UI/UX Design', desc: 'Intuitive interfaces designed for maximum user engagement.' },
-    { icon: 'âœï¸', name: 'Graphic Design', desc: 'Stunning visual assets that elevate your brand identity.' },
-    { icon: 'ðŸ’¼', name: 'Branding', desc: 'Complete brand identity systems that make you unforgettable.' },
-    { icon: 'ðŸ¤–', name: 'AI Solutions', desc: 'Intelligent automation and AI-powered tools for your business.' },
-    { icon: 'ðŸ“ˆ', name: 'Digital Marketing', desc: 'Data-driven strategies to grow your reach and revenue.' },
+    { icon: '??', name: 'Website Development', desc: 'Custom websites built with modern frameworks and best practices.' },
+    { icon: '??', name: 'Mobile Applications', desc: 'Native and cross-platform apps for iOS and Android.' },
+    { icon: '??', name: 'E-Commerce Stores', desc: 'Powerful online stores that convert visitors into customers.' },
+    { icon: '??', name: 'UI/UX Design', desc: 'Intuitive interfaces designed for maximum user engagement.' },
+    { icon: '??', name: 'Graphic Design', desc: 'Stunning visual assets that elevate your brand identity.' },
+    { icon: '??', name: 'Branding', desc: 'Complete brand identity systems that make you unforgettable.' },
+    { icon: '??', name: 'AI Solutions', desc: 'Intelligent automation and AI-powered tools for your business.' },
+    { icon: '??', name: 'Digital Marketing', desc: 'Data-driven strategies to grow your reach and revenue.' },
   ];
 
   return `
@@ -186,7 +186,7 @@ function servicesPreview() {
               <div class="service-icon">${s.icon}</div>
               <h3 class="service-name">${s.name}</h3>
               <p class="service-desc">${s.desc}</p>
-              <span class="service-arrow">Learn more â†’</span>
+              <span class="service-arrow">Learn more â†</span>
             </div>
           `).join('')}
         </div>
@@ -199,7 +199,7 @@ function portfolioPreview() {
   const projects = [
     { title: 'Quantum Finance', category: 'Web Application', tech: ['React', 'Node.js', 'AWS'], color: '#7c5cfc', icon: 'ðŸ¦' },
     { title: 'Verdant Health', category: 'Mobile App', tech: ['Flutter', 'Firebase', 'AI'], color: '#00d4aa', icon: 'ðŸ¥' },
-    { title: 'Luxe Fashion', category: 'E-Commerce', tech: ['Next.js', 'Stripe', 'Sanity'], color: '#ff6b9d', icon: 'ðŸ‘—' },
+    { title: 'Luxe Fashion', category: 'E-Commerce', tech: ['Next.js', 'Stripe', 'Sanity'], color: '#ff6b9d', icon: 'ðŸ' },
     { title: 'Neural Analytics', category: 'AI Platform', tech: ['Python', 'TensorFlow', 'React'], color: '#ffa94d', icon: 'ðŸ§ ' },
   ];
 
@@ -233,7 +233,7 @@ function portfolioPreview() {
           `).join('')}
         </div>
         <div style="text-align:center;margin-top:var(--space-10);" class="reveal">
-          <a href="./portfolio" class="btn btn-secondary btn-large" data-link>View All Projects â†’</a>
+          <a href="./portfolio" class="btn btn-secondary btn-large" data-link>View All Projects â†</a>
         </div>
       </div>
     </section>
@@ -246,10 +246,10 @@ function testimonialsSection() {
     { name: 'Michael Chen', company: 'GrowthLab', initials: 'MC', quote: 'Working with Nexus was the best investment we made for our startup. They delivered a beautiful, fast, and scalable platform that our users absolutely love. Highly recommend!', rating: 5 },
     { name: 'Emma Williams', company: 'Luxe Retail', initials: 'EW', quote: 'The e-commerce platform they built for us is stunning. Sales increased 250% after launch. The team is professional, responsive, and truly cares about delivering the best result.', rating: 5 },
     { name: 'David Park', company: 'NeuralWave AI', initials: 'DP', quote: 'Their AI solutions expertise is exceptional. They built a custom dashboard that saves our team 20+ hours per week. The design is world-class and the code quality is impeccable.', rating: 5 },
-    { name: 'Lisa Zhang', company: 'Bloom Beauty', initials: 'LZ', quote: 'From branding to website to mobile app â€” Nexus handled everything flawlessly. They are a true partner who understands business needs and translates them into beautiful products.', rating: 5 },
+    { name: 'Lisa Zhang', company: 'Bloom Beauty', initials: 'LZ', quote: 'From branding to website to mobile app â€ Nexus handled everything flawlessly. They are a true partner who understands business needs and translates them into beautiful products.', rating: 5 },
   ];
 
-  const stars = 'â˜…'.repeat(5);
+  const stars = 'â˜'.repeat(5);
 
   return `
     <section class="section testimonials-section" id="testimonials" style="background: var(--bg-secondary);">
@@ -257,7 +257,7 @@ function testimonialsSection() {
         <div class="section-header reveal">
           <span class="section-label">âœ¦ Testimonials</span>
           <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
-          <p class="section-subtitle">Don't just take our word for it â€” hear from some of our amazing clients.</p>
+          <p class="section-subtitle">Don't just take our word for it â€ hear from some of our amazing clients.</p>
         </div>
         <div style="overflow:hidden;" class="reveal" id="testimonial-wrapper">
           <div class="testimonial-slider" id="testimonial-slider">
@@ -392,7 +392,7 @@ setInterval(() => {
   }
 }, 5000);
 
-// Init typing on page load â€” called from router
+// Init typing on page load â€ called from router
 export function initHomePage() {
   initTypingEffect();
 }

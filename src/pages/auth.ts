@@ -1,5 +1,5 @@
 // ============================================
-// NEXUS AGENCY — Authentication (Login/Register)
+// NEXUS AGENCY  Authentication (Login/Register)
 // ============================================
 
 import { apiFetch } from '../utils/api';
@@ -11,7 +11,7 @@ export function renderAuth() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Access Portal</span>
+          <span class="section-label reveal">? Access Portal</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Client <span class="gradient-text">Portal</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Sign in to track projects, manage deliverables, and chat with your team.</p>
         </div>
@@ -47,7 +47,7 @@ export function renderAuth() {
               <label for="login-remember" style="font-size: var(--font-size-sm); color: var(--text-secondary); cursor: pointer;">Remember me</label>
             </div>
             <button type="submit" class="btn btn-primary btn-large btn-shimmer" style="width: 100%; justify-content: center; margin-top: var(--space-4);">
-              Sign In →
+              Sign In ?
             </button>
           </form>
 
@@ -70,7 +70,7 @@ export function renderAuth() {
               <input type="password" id="register-password" class="form-input" placeholder="••••••••" required minlength="8" />
             </div>
             <button type="submit" class="btn btn-primary btn-large btn-shimmer" style="width: 100%; justify-content: center; margin-top: var(--space-4);">
-              Create Account →
+              Create Account ?
             </button>
           </form>
         </div>
@@ -80,7 +80,7 @@ export function renderAuth() {
     <!-- Forgot Password Modal -->
     <div id="forgot-password-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: var(--z-modal); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(10px); opacity: 0; pointer-events: none; transition: opacity 0.3s ease;">
       <div class="glass-card" style="width: 90%; max-width: 400px; padding: var(--space-8); position: relative;">
-        <button id="forgot-modal-close" style="position: absolute; top: var(--space-4); right: var(--space-4); background: none; border: none; color: var(--text-secondary); font-size: var(--font-size-lg); cursor: pointer;">✕</button>
+        <button id="forgot-modal-close" style="position: absolute; top: var(--space-4); right: var(--space-4); background: none; border: none; color: var(--text-secondary); font-size: var(--font-size-lg); cursor: pointer;">?</button>
         <h3 style="font-size: var(--font-size-xl); font-weight: 800; margin-bottom: var(--space-2);">Reset Password</h3>
         <p style="color: var(--text-secondary); font-size: var(--font-size-sm); margin-bottom: var(--space-6);">Enter your email address and we'll send you a password reset link.</p>
         

@@ -1,5 +1,5 @@
-﻿// ============================================
-// NEXUS AGENCY â€” Cost Estimator
+// ============================================
+// NEXUS AGENCY â€ Cost Estimator
 // ============================================
 
 export function renderEstimator() {
@@ -105,7 +105,7 @@ export function renderEstimator() {
           </div>
 
           <div style="text-align:center;margin-top:var(--space-8);">
-            <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start Your Project â†’</a>
+            <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start Your Project â†</a>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ export function renderEstimator() {
   const check = el.querySelector('.est-check') as HTMLElement;
   if (!check) return;
   if (el.classList.contains('selected')) {
-    check.textContent = 'âœ“';
+    check.textContent = 'âœ';
     check.style.borderColor = 'var(--accent-primary)';
     check.style.background = 'var(--accent-primary)';
     check.style.color = 'white';

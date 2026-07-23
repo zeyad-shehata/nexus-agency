@@ -1,5 +1,5 @@
 // ============================================
-// NEXUS AGENCY — UI Components
+// NEXUS AGENCY  UI Components
 // Premium Edition v2.0
 // ============================================
 
