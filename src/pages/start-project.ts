@@ -1,5 +1,5 @@
-// ============================================
-// NEXUS AGENCY — Start Your Project (Multi-Step Form)
+﻿// ============================================
+// NEXUS AGENCY â€” Start Your Project (Multi-Step Form)
 // ============================================
 
 export function renderStartProject() {
@@ -10,7 +10,7 @@ export function renderStartProject() {
         <div class="page-hero-bg"></div>
         <div class="page-hero-content">
           <div class="container">
-            <span class="section-label reveal">✦ Start Your Project</span>
+            <span class="section-label reveal">âœ¦ Start Your Project</span>
             <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Let's Build <span class="gradient-text">Together</span></h1>
             <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Tell us about your project and we'll bring your vision to life.</p>
           </div>
@@ -19,10 +19,10 @@ export function renderStartProject() {
       <section class="section">
         <div class="container" style="max-width: 500px; text-align:center;">
           <div class="glass-card reveal" style="padding: var(--space-10);">
-            <div style="font-size:3.5rem; margin-bottom: var(--space-4);">🔒</div>
+            <div style="font-size:3.5rem; margin-bottom: var(--space-4);">ðŸ”’</div>
             <h2 style="font-size: var(--font-size-xl); font-weight:800; margin-bottom: var(--space-2);">Authentication Required</h2>
             <p style="color: var(--text-secondary); margin-bottom: var(--space-6);">Please sign in or register a workspace account to submit project proposals and track development.</p>
-            <a href="/auth" class="btn btn-primary" data-link>Sign In / Register</a>
+            <a href="./auth" class="btn btn-primary" data-link>Sign In / Register</a>
           </div>
         </div>
       </section>
@@ -36,7 +36,7 @@ export function renderStartProject() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Start Your Project</span>
+          <span class="section-label reveal">âœ¦ Start Your Project</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Let's Build <span class="gradient-text">Together</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Tell us about your project and we'll bring your vision to life.</p>
         </div>
@@ -68,7 +68,7 @@ export function renderStartProject() {
             </div>
             <div class="step-buttons">
               <div></div>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -113,8 +113,8 @@ export function renderStartProject() {
               <input type="text" class="form-input" id="form-country" placeholder="United States" />
             </div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -135,8 +135,8 @@ export function renderStartProject() {
               <textarea class="form-textarea form-input" id="form-features" placeholder="List the key features you need..." style="min-height:80px;"></textarea>
             </div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -164,8 +164,8 @@ export function renderStartProject() {
               <textarea class="form-textarea form-input" id="form-references" placeholder="Share URLs of websites you like..." style="min-height:80px;"></textarea>
             </div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ export function renderStartProject() {
             <h2 class="step-title">Budget Range</h2>
             <p class="step-subtitle">Select your approximate budget range.</p>
             <div class="radio-group" id="form-budget-group" style="grid-template-columns:1fr;">
-              ${['Under $500', '$500 — $1,000', '$1,000 — $5,000', '$5,000 — $10,000', '$10,000+'].map(b => `
+              ${['Under $500', '$500 â€” $1,000', '$1,000 â€” $5,000', '$5,000 â€” $10,000', '$10,000+'].map(b => `
                 <div class="radio-option" onclick="selectRadio(this)">
                   <div class="radio-dot"></div>
                   <span>${b}</span>
@@ -182,8 +182,8 @@ export function renderStartProject() {
               `).join('')}
             </div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -200,8 +200,8 @@ export function renderStartProject() {
               `).join('')}
             </div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -210,15 +210,15 @@ export function renderStartProject() {
             <h2 class="step-title">File Uploads</h2>
             <p class="step-subtitle">Attach any relevant files (logos, documents, references).</p>
             <div class="file-upload-area" onclick="document.getElementById('file-input').click()">
-              <div class="file-upload-icon">📁</div>
+              <div class="file-upload-icon">ðŸ“</div>
               <div class="file-upload-text">Click or drag files here to upload</div>
               <div class="file-upload-hint">Supports: Images, PDFs, Word, ZIP (Max 10MB each)</div>
               <input type="file" id="file-input" multiple accept=".jpg,.jpeg,.png,.gif,.pdf,.doc,.docx,.zip" style="display:none" onchange="handleStepFileChange(this)" />
             </div>
             <div id="file-list" style="margin-top:var(--space-4);"></div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
-              <button class="btn btn-primary" onclick="nextStep()">Next Step →</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
+              <button class="btn btn-primary" onclick="nextStep()">Next Step â†’</button>
             </div>
           </div>
 
@@ -230,21 +230,21 @@ export function renderStartProject() {
               <textarea class="form-textarea form-input" id="form-notes" placeholder="Share any additional information, questions, or specific requirements..." style="min-height:200px;"></textarea>
             </div>
             <div class="step-buttons">
-              <button class="btn btn-secondary" onclick="prevStep()">← Back</button>
+              <button class="btn btn-secondary" onclick="prevStep()">â† Back</button>
               <button class="btn btn-primary btn-large btn-shimmer" onclick="submitProject()">
-                🚀 Submit Project
+                ðŸš€ Submit Project
               </button>
             </div>
           </div>
 
           <!-- Success State -->
           <div class="step-panel" data-panel="success" style="text-align:center;padding:var(--space-16) 0;">
-            <div style="font-size:5rem;margin-bottom:var(--space-6);">🎉</div>
+            <div style="font-size:5rem;margin-bottom:var(--space-6);">ðŸŽ‰</div>
             <h2 class="step-title" style="margin-bottom:var(--space-4);">Project Submitted!</h2>
             <p style="color:var(--text-secondary);margin-bottom:var(--space-8);max-width:500px;margin-left:auto;margin-right:auto;">
               Thank you for choosing Nexus! We've received your project details and have initialized your workspace project tracker.
             </p>
-            <a href="/dashboard" class="btn btn-primary btn-large" data-link>Go to Dashboard</a>
+            <a href="./dashboard" class="btn btn-primary btn-large" data-link>Go to Dashboard</a>
           </div>
         </div>
       </div>
@@ -296,7 +296,7 @@ export function initStartProject() {
     if (!list || !input.files) return;
     list.innerHTML = Array.from(input.files).map((f: File) => `
       <div style="background:rgba(255,255,255,0.02); padding:var(--space-2) var(--space-4); border-radius:var(--radius-sm); margin-bottom:var(--space-2); font-size:var(--font-size-xs);">
-        📄 ${f.name} (${(f.size/1024).toFixed(1)} KB)
+        ðŸ“„ ${f.name} (${(f.size/1024).toFixed(1)} KB)
       </div>
     `).join('');
   };
@@ -402,3 +402,4 @@ ${notes}
     }
   };
 }
+

@@ -1,5 +1,5 @@
-// ============================================
-// NEXUS AGENCY — Home Page
+﻿// ============================================
+// NEXUS AGENCY â€” Home Page
 // Premium Edition v2.0
 // ============================================
 
@@ -49,11 +49,11 @@ function heroSection() {
             We design and develop premium <span class="typing-wrapper"><span class="typing-text" id="typing-text">websites</span></span> that help businesses grow, scale, and dominate their market.
           </p>
           <div class="hero-buttons reveal reveal-delay-3">
-            <a href="/start-project" class="btn btn-primary btn-large btn-shimmer" data-link>
+            <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>
               Start Your Project
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="/portfolio" class="btn btn-secondary btn-large" data-link>
+            <a href="./portfolio" class="btn btn-secondary btn-large" data-link>
               View Portfolio
             </a>
           </div>
@@ -69,22 +69,22 @@ function heroSection() {
 
 function techTicker() {
   const techs = [
-    { icon: '⚛️', name: 'React' },
-    { icon: '🔺', name: 'Next.js' },
-    { icon: '💚', name: 'Vue.js' },
-    { icon: '🟦', name: 'TypeScript' },
-    { icon: '🐍', name: 'Python' },
-    { icon: '🔥', name: 'Firebase' },
-    { icon: '☁️', name: 'AWS' },
-    { icon: '🤖', name: 'TensorFlow' },
-    { icon: '📱', name: 'Flutter' },
-    { icon: '🎨', name: 'Figma' },
-    { icon: '🔷', name: 'Docker' },
-    { icon: '⚡', name: 'Node.js' },
-    { icon: '🛡️', name: 'GraphQL' },
-    { icon: '🔮', name: 'OpenAI' },
-    { icon: '🌊', name: 'Tailwind' },
-    { icon: '🗄️', name: 'PostgreSQL' },
+    { icon: 'âš›ï¸', name: 'React' },
+    { icon: 'ðŸ”º', name: 'Next.js' },
+    { icon: 'ðŸ’š', name: 'Vue.js' },
+    { icon: 'ðŸŸ¦', name: 'TypeScript' },
+    { icon: 'ðŸ', name: 'Python' },
+    { icon: 'ðŸ”¥', name: 'Firebase' },
+    { icon: 'â˜ï¸', name: 'AWS' },
+    { icon: 'ðŸ¤–', name: 'TensorFlow' },
+    { icon: 'ðŸ“±', name: 'Flutter' },
+    { icon: 'ðŸŽ¨', name: 'Figma' },
+    { icon: 'ðŸ”·', name: 'Docker' },
+    { icon: 'âš¡', name: 'Node.js' },
+    { icon: 'ðŸ›¡ï¸', name: 'GraphQL' },
+    { icon: 'ðŸ”®', name: 'OpenAI' },
+    { icon: 'ðŸŒŠ', name: 'Tailwind' },
+    { icon: 'ðŸ—„ï¸', name: 'PostgreSQL' },
   ];
 
   const items = techs.map(t => `
@@ -105,10 +105,10 @@ function techTicker() {
 
 function statsSection() {
   const stats = [
-    { count: 150, suffix: '+', label: 'Projects Completed', icon: '🚀' },
-    { count: 120, suffix: '+', label: 'Happy Clients', icon: '😊' },
-    { count: 8, suffix: '+', label: 'Years of Experience', icon: '⭐' },
-    { count: 99, suffix: '%', label: 'Client Satisfaction', icon: '💯' },
+    { count: 150, suffix: '+', label: 'Projects Completed', icon: 'ðŸš€' },
+    { count: 120, suffix: '+', label: 'Happy Clients', icon: 'ðŸ˜Š' },
+    { count: 8, suffix: '+', label: 'Years of Experience', icon: 'â­' },
+    { count: 99, suffix: '%', label: 'Client Satisfaction', icon: 'ðŸ’¯' },
   ];
 
   return `
@@ -130,19 +130,19 @@ function statsSection() {
 
 function whyChooseUs() {
   const features = [
-    { icon: '👥', title: 'Professional Team', desc: 'Expert designers and developers with years of experience building world-class digital products.', color: 'var(--accent-primary-rgb)' },
-    { icon: '⚡', title: 'Fast Delivery', desc: 'We deliver projects on time without compromising on quality, using agile methodologies.', color: 'var(--accent-secondary-rgb)' },
-    { icon: '💎', title: 'Premium Quality', desc: 'Every pixel matters. We craft premium designs that stand out and drive real results.', color: 'var(--accent-tertiary-rgb)' },
-    { icon: '🔒', title: 'Secure Process', desc: 'Enterprise-grade security practices to protect your data and your users throughout.', color: 'var(--accent-warm-rgb)' },
-    { icon: '🛠️', title: 'Continuous Support', desc: 'We don\'t disappear after launch. Ongoing maintenance, updates, and 24/7 support.', color: 'var(--accent-cyan-rgb)' },
-    { icon: '🧠', title: 'Modern Technologies', desc: 'Latest tech stack including AI, cloud-native, and cutting-edge frameworks.', color: 'var(--accent-primary-rgb)' },
+    { icon: 'ðŸ‘¥', title: 'Professional Team', desc: 'Expert designers and developers with years of experience building world-class digital products.', color: 'var(--accent-primary-rgb)' },
+    { icon: 'âš¡', title: 'Fast Delivery', desc: 'We deliver projects on time without compromising on quality, using agile methodologies.', color: 'var(--accent-secondary-rgb)' },
+    { icon: 'ðŸ’Ž', title: 'Premium Quality', desc: 'Every pixel matters. We craft premium designs that stand out and drive real results.', color: 'var(--accent-tertiary-rgb)' },
+    { icon: 'ðŸ”’', title: 'Secure Process', desc: 'Enterprise-grade security practices to protect your data and your users throughout.', color: 'var(--accent-warm-rgb)' },
+    { icon: 'ðŸ› ï¸', title: 'Continuous Support', desc: 'We don\'t disappear after launch. Ongoing maintenance, updates, and 24/7 support.', color: 'var(--accent-cyan-rgb)' },
+    { icon: 'ðŸ§ ', title: 'Modern Technologies', desc: 'Latest tech stack including AI, cloud-native, and cutting-edge frameworks.', color: 'var(--accent-primary-rgb)' },
   ];
 
   return `
     <section class="section" id="why-us">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">✦ Why Choose Us</span>
+          <span class="section-label">âœ¦ Why Choose Us</span>
           <h2 class="section-title">Built Different. <span class="gradient-text">Built Better.</span></h2>
           <p class="section-subtitle">We combine cutting-edge technology with stunning design to create digital experiences that drive real business results.</p>
         </div>
@@ -162,21 +162,21 @@ function whyChooseUs() {
 
 function servicesPreview() {
   const services = [
-    { icon: '🌐', name: 'Website Development', desc: 'Custom websites built with modern frameworks and best practices.' },
-    { icon: '📱', name: 'Mobile Applications', desc: 'Native and cross-platform apps for iOS and Android.' },
-    { icon: '🛒', name: 'E-Commerce Stores', desc: 'Powerful online stores that convert visitors into customers.' },
-    { icon: '🎨', name: 'UI/UX Design', desc: 'Intuitive interfaces designed for maximum user engagement.' },
-    { icon: '✏️', name: 'Graphic Design', desc: 'Stunning visual assets that elevate your brand identity.' },
-    { icon: '💼', name: 'Branding', desc: 'Complete brand identity systems that make you unforgettable.' },
-    { icon: '🤖', name: 'AI Solutions', desc: 'Intelligent automation and AI-powered tools for your business.' },
-    { icon: '📈', name: 'Digital Marketing', desc: 'Data-driven strategies to grow your reach and revenue.' },
+    { icon: 'ðŸŒ', name: 'Website Development', desc: 'Custom websites built with modern frameworks and best practices.' },
+    { icon: 'ðŸ“±', name: 'Mobile Applications', desc: 'Native and cross-platform apps for iOS and Android.' },
+    { icon: 'ðŸ›’', name: 'E-Commerce Stores', desc: 'Powerful online stores that convert visitors into customers.' },
+    { icon: 'ðŸŽ¨', name: 'UI/UX Design', desc: 'Intuitive interfaces designed for maximum user engagement.' },
+    { icon: 'âœï¸', name: 'Graphic Design', desc: 'Stunning visual assets that elevate your brand identity.' },
+    { icon: 'ðŸ’¼', name: 'Branding', desc: 'Complete brand identity systems that make you unforgettable.' },
+    { icon: 'ðŸ¤–', name: 'AI Solutions', desc: 'Intelligent automation and AI-powered tools for your business.' },
+    { icon: 'ðŸ“ˆ', name: 'Digital Marketing', desc: 'Data-driven strategies to grow your reach and revenue.' },
   ];
 
   return `
     <section class="section" id="services-preview" style="background: var(--bg-secondary);">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">✦ Our Services</span>
+          <span class="section-label">âœ¦ Our Services</span>
           <h2 class="section-title">What We <span class="gradient-text">Create</span></h2>
           <p class="section-subtitle">End-to-end digital solutions tailored to your business needs and growth objectives.</p>
         </div>
@@ -186,7 +186,7 @@ function servicesPreview() {
               <div class="service-icon">${s.icon}</div>
               <h3 class="service-name">${s.name}</h3>
               <p class="service-desc">${s.desc}</p>
-              <span class="service-arrow">Learn more →</span>
+              <span class="service-arrow">Learn more â†’</span>
             </div>
           `).join('')}
         </div>
@@ -197,17 +197,17 @@ function servicesPreview() {
 
 function portfolioPreview() {
   const projects = [
-    { title: 'Quantum Finance', category: 'Web Application', tech: ['React', 'Node.js', 'AWS'], color: '#7c5cfc', icon: '🏦' },
-    { title: 'Verdant Health', category: 'Mobile App', tech: ['Flutter', 'Firebase', 'AI'], color: '#00d4aa', icon: '🏥' },
-    { title: 'Luxe Fashion', category: 'E-Commerce', tech: ['Next.js', 'Stripe', 'Sanity'], color: '#ff6b9d', icon: '👗' },
-    { title: 'Neural Analytics', category: 'AI Platform', tech: ['Python', 'TensorFlow', 'React'], color: '#ffa94d', icon: '🧠' },
+    { title: 'Quantum Finance', category: 'Web Application', tech: ['React', 'Node.js', 'AWS'], color: '#7c5cfc', icon: 'ðŸ¦' },
+    { title: 'Verdant Health', category: 'Mobile App', tech: ['Flutter', 'Firebase', 'AI'], color: '#00d4aa', icon: 'ðŸ¥' },
+    { title: 'Luxe Fashion', category: 'E-Commerce', tech: ['Next.js', 'Stripe', 'Sanity'], color: '#ff6b9d', icon: 'ðŸ‘—' },
+    { title: 'Neural Analytics', category: 'AI Platform', tech: ['Python', 'TensorFlow', 'React'], color: '#ffa94d', icon: 'ðŸ§ ' },
   ];
 
   return `
     <section class="section" id="portfolio-preview">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">✦ Featured Work</span>
+          <span class="section-label">âœ¦ Featured Work</span>
           <h2 class="section-title">Our <span class="gradient-text">Portfolio</span></h2>
           <p class="section-subtitle">Selected projects that showcase our expertise and commitment to excellence.</p>
         </div>
@@ -219,7 +219,7 @@ function portfolioPreview() {
                   ${p.icon}
                 </div>
                 <div class="portfolio-overlay">
-                  <a href="/portfolio" class="btn btn-primary btn-shimmer" data-link>View Details</a>
+                  <a href="./portfolio" class="btn btn-primary btn-shimmer" data-link>View Details</a>
                 </div>
               </div>
               <div class="portfolio-info">
@@ -233,7 +233,7 @@ function portfolioPreview() {
           `).join('')}
         </div>
         <div style="text-align:center;margin-top:var(--space-10);" class="reveal">
-          <a href="/portfolio" class="btn btn-secondary btn-large" data-link>View All Projects →</a>
+          <a href="./portfolio" class="btn btn-secondary btn-large" data-link>View All Projects â†’</a>
         </div>
       </div>
     </section>
@@ -246,18 +246,18 @@ function testimonialsSection() {
     { name: 'Michael Chen', company: 'GrowthLab', initials: 'MC', quote: 'Working with Nexus was the best investment we made for our startup. They delivered a beautiful, fast, and scalable platform that our users absolutely love. Highly recommend!', rating: 5 },
     { name: 'Emma Williams', company: 'Luxe Retail', initials: 'EW', quote: 'The e-commerce platform they built for us is stunning. Sales increased 250% after launch. The team is professional, responsive, and truly cares about delivering the best result.', rating: 5 },
     { name: 'David Park', company: 'NeuralWave AI', initials: 'DP', quote: 'Their AI solutions expertise is exceptional. They built a custom dashboard that saves our team 20+ hours per week. The design is world-class and the code quality is impeccable.', rating: 5 },
-    { name: 'Lisa Zhang', company: 'Bloom Beauty', initials: 'LZ', quote: 'From branding to website to mobile app — Nexus handled everything flawlessly. They are a true partner who understands business needs and translates them into beautiful products.', rating: 5 },
+    { name: 'Lisa Zhang', company: 'Bloom Beauty', initials: 'LZ', quote: 'From branding to website to mobile app â€” Nexus handled everything flawlessly. They are a true partner who understands business needs and translates them into beautiful products.', rating: 5 },
   ];
 
-  const stars = '★'.repeat(5);
+  const stars = 'â˜…'.repeat(5);
 
   return `
     <section class="section testimonials-section" id="testimonials" style="background: var(--bg-secondary);">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">✦ Testimonials</span>
+          <span class="section-label">âœ¦ Testimonials</span>
           <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
-          <p class="section-subtitle">Don't just take our word for it — hear from some of our amazing clients.</p>
+          <p class="section-subtitle">Don't just take our word for it â€” hear from some of our amazing clients.</p>
         </div>
         <div style="overflow:hidden;" class="reveal" id="testimonial-wrapper">
           <div class="testimonial-slider" id="testimonial-slider">
@@ -298,10 +298,10 @@ function ctaSection() {
       <div class="cta-glow"></div>
       <div class="container">
         <div class="cta-content reveal">
-          <span class="section-label">✦ Ready to Start?</span>
+          <span class="section-label">âœ¦ Ready to Start?</span>
           <h2 class="cta-title">Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
           <p class="cta-subtitle">Your vision deserves a world-class digital presence. Let's make it happen together.</p>
-          <a href="/start-project" class="btn btn-primary btn-large btn-shimmer" data-link>
+          <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>
             Let's Build Your Project
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -392,7 +392,8 @@ setInterval(() => {
   }
 }, 5000);
 
-// Init typing on page load — called from router
+// Init typing on page load â€” called from router
 export function initHomePage() {
   initTypingEffect();
 }
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Redirecting</title>
+  <style>
+    body { margin: 0; font-family: Inter, system-ui, Helvetica, Arial, sans-serif; background: #09090f; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+    .card { max-width: 560px; padding: 2rem; border-radius: 24px; background: rgba(15, 23, 42, 0.95); box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35); text-align: center; }
+    a { color: #7c3aed; text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Page Not Found</h1>
+    <p>We're redirecting you back to the app so the route can load correctly.</p>
+    <p>If the redirect does not work, <a id="redirect-link" href="./">click here</a>.</p>
+  </div>
+
+  <script>
+    const path = window.location.pathname;
+    const search = window.location.search || '';
+    let repoRoot = '';
+    let routePath = '';
+
+    if (window.location.hostname.endsWith('github.io')) {
+      const parts = path.split('/').filter(Boolean);
+      if (parts.length > 1) {
+        repoRoot = '/' + parts[0];
+        routePath = '/' + parts.slice(1).join('/');
+      } else {
+        routePath = '/' + parts.join('/');
+      }
+    } else {
+      routePath = '/' + path.split('/').filter(Boolean).join('/');
+    }
+
+    if (routePath === '/undefined') routePath = '/';
+    const target = `${window.location.origin}${repoRoot}/#${routePath === '/' ? '' : routePath}${search}`.replace(/\/\/#/, '/#');
+    const link = document.getElementById('redirect-link');
+    if (link) {
+      link.setAttribute('href', target);
+    }
+    setTimeout(() => {
+      window.location.replace(target);
+    }, 800);
+  </script>
+</body>
+</html>

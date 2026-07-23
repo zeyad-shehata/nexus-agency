@@ -1,18 +1,18 @@
-// ============================================
-// NEXUS AGENCY — Portfolio Page
-// Premium Edition v2.0 — with Lightbox
+﻿// ============================================
+// NEXUS AGENCY â€” Portfolio Page
+// Premium Edition v2.0 â€” with Lightbox
 // ============================================
 
 const projectsData = [
-  { title: 'Quantum Finance', cat: 'Web App', desc: 'A cutting-edge fintech platform with real-time analytics, AI-powered insights, and seamless payment processing.', tech: ['React', 'Node.js', 'AWS'], icon: '🏦', metrics: '340% conversion increase', color: '#7c5cfc', client: 'FinEdge Capital', duration: '3 months', challenge: 'Building a real-time trading dashboard that handles 10K+ concurrent users with sub-second latency.' },
-  { title: 'Verdant Health', cat: 'Mobile', desc: 'A comprehensive health and wellness app with AI-driven personalized recommendations and telemedicine.', tech: ['Flutter', 'Firebase', 'TensorFlow'], icon: '🏥', metrics: '500K+ downloads', color: '#00d4aa', client: 'Verdant Health Inc.', duration: '4 months', challenge: 'Integrating HIPAA-compliant video calls with AI-powered health assessments.' },
-  { title: 'Luxe Fashion', cat: 'E-Commerce', desc: 'Premium fashion e-commerce with AR try-on, personalized styling, and global shipping integration.', tech: ['Next.js', 'Stripe', 'Sanity'], icon: '👗', metrics: '250% revenue growth', color: '#ff6b9d', client: 'Luxe Retail Group', duration: '2.5 months', challenge: 'Creating a seamless AR try-on experience that works across all mobile browsers.' },
-  { title: 'Neural Analytics', cat: 'AI', desc: 'An intelligent data analytics dashboard with predictive modeling and natural language querying.', tech: ['Python', 'React', 'TensorFlow'], icon: '🧠', metrics: '20hrs/week saved', color: '#ffa94d', client: 'NeuralWave AI', duration: '5 months', challenge: 'Training custom ML models on proprietary data while maintaining enterprise-grade security.' },
-  { title: 'Bloom Beauty', cat: 'Branding', desc: 'Complete brand identity redesign for a luxury beauty brand including logo, packaging, and digital presence.', tech: ['Figma', 'Illustrator', 'After Effects'], icon: '🌸', metrics: '180% brand awareness', color: '#e879f9', client: 'Bloom Beauty Co.', duration: '6 weeks', challenge: 'Maintaining brand heritage while creating a modern, Gen-Z appealing identity.' },
-  { title: 'CloudSync Pro', cat: 'Web App', desc: 'Enterprise cloud management platform with automated deployment, monitoring, and cost optimization.', tech: ['Vue.js', 'Go', 'Kubernetes'], icon: '☁️', metrics: '60% cost reduction', color: '#38bdf8', client: 'CloudSync Inc.', duration: '4 months', challenge: 'Building a multi-cloud orchestration layer that supports AWS, GCP, and Azure.' },
-  { title: 'FoodieHub', cat: 'Mobile', desc: 'Food delivery app with real-time tracking, AI-based recommendations, and social dining features.', tech: ['React Native', 'Node.js', 'MongoDB'], icon: '🍕', metrics: '1M+ orders/month', color: '#fb923c', client: 'FoodieHub Inc.', duration: '3.5 months', challenge: 'Implementing real-time GPS tracking with live route optimization for drivers.' },
-  { title: 'EcoMarket', cat: 'E-Commerce', desc: 'Sustainable marketplace connecting eco-friendly brands with conscious consumers worldwide.', tech: ['Shopify', 'Next.js', 'GraphQL'], icon: '🌿', metrics: '400% growth in 6mo', color: '#4ade80', client: 'EcoMarket LLC', duration: '2 months', challenge: 'Building a carbon footprint calculator integrated into the checkout process.' },
-  { title: 'PixelForge Studio', cat: 'Branding', desc: 'Creative agency rebrand with a bold, modern identity system across all touchpoints.', tech: ['Figma', 'Cinema 4D', 'Photoshop'], icon: '🎨', metrics: '2x client inquiries', color: '#a78bfa', client: 'PixelForge Studio', duration: '4 weeks', challenge: 'Designing a flexible identity system that works across 50+ brand touchpoints.' },
+  { title: 'Quantum Finance', cat: 'Web App', desc: 'A cutting-edge fintech platform with real-time analytics, AI-powered insights, and seamless payment processing.', tech: ['React', 'Node.js', 'AWS'], icon: 'ðŸ¦', metrics: '340% conversion increase', color: '#7c5cfc', client: 'FinEdge Capital', duration: '3 months', challenge: 'Building a real-time trading dashboard that handles 10K+ concurrent users with sub-second latency.' },
+  { title: 'Verdant Health', cat: 'Mobile', desc: 'A comprehensive health and wellness app with AI-driven personalized recommendations and telemedicine.', tech: ['Flutter', 'Firebase', 'TensorFlow'], icon: 'ðŸ¥', metrics: '500K+ downloads', color: '#00d4aa', client: 'Verdant Health Inc.', duration: '4 months', challenge: 'Integrating HIPAA-compliant video calls with AI-powered health assessments.' },
+  { title: 'Luxe Fashion', cat: 'E-Commerce', desc: 'Premium fashion e-commerce with AR try-on, personalized styling, and global shipping integration.', tech: ['Next.js', 'Stripe', 'Sanity'], icon: 'ðŸ‘—', metrics: '250% revenue growth', color: '#ff6b9d', client: 'Luxe Retail Group', duration: '2.5 months', challenge: 'Creating a seamless AR try-on experience that works across all mobile browsers.' },
+  { title: 'Neural Analytics', cat: 'AI', desc: 'An intelligent data analytics dashboard with predictive modeling and natural language querying.', tech: ['Python', 'React', 'TensorFlow'], icon: 'ðŸ§ ', metrics: '20hrs/week saved', color: '#ffa94d', client: 'NeuralWave AI', duration: '5 months', challenge: 'Training custom ML models on proprietary data while maintaining enterprise-grade security.' },
+  { title: 'Bloom Beauty', cat: 'Branding', desc: 'Complete brand identity redesign for a luxury beauty brand including logo, packaging, and digital presence.', tech: ['Figma', 'Illustrator', 'After Effects'], icon: 'ðŸŒ¸', metrics: '180% brand awareness', color: '#e879f9', client: 'Bloom Beauty Co.', duration: '6 weeks', challenge: 'Maintaining brand heritage while creating a modern, Gen-Z appealing identity.' },
+  { title: 'CloudSync Pro', cat: 'Web App', desc: 'Enterprise cloud management platform with automated deployment, monitoring, and cost optimization.', tech: ['Vue.js', 'Go', 'Kubernetes'], icon: 'â˜ï¸', metrics: '60% cost reduction', color: '#38bdf8', client: 'CloudSync Inc.', duration: '4 months', challenge: 'Building a multi-cloud orchestration layer that supports AWS, GCP, and Azure.' },
+  { title: 'FoodieHub', cat: 'Mobile', desc: 'Food delivery app with real-time tracking, AI-based recommendations, and social dining features.', tech: ['React Native', 'Node.js', 'MongoDB'], icon: 'ðŸ•', metrics: '1M+ orders/month', color: '#fb923c', client: 'FoodieHub Inc.', duration: '3.5 months', challenge: 'Implementing real-time GPS tracking with live route optimization for drivers.' },
+  { title: 'EcoMarket', cat: 'E-Commerce', desc: 'Sustainable marketplace connecting eco-friendly brands with conscious consumers worldwide.', tech: ['Shopify', 'Next.js', 'GraphQL'], icon: 'ðŸŒ¿', metrics: '400% growth in 6mo', color: '#4ade80', client: 'EcoMarket LLC', duration: '2 months', challenge: 'Building a carbon footprint calculator integrated into the checkout process.' },
+  { title: 'PixelForge Studio', cat: 'Branding', desc: 'Creative agency rebrand with a bold, modern identity system across all touchpoints.', tech: ['Figma', 'Cinema 4D', 'Photoshop'], icon: 'ðŸŽ¨', metrics: '2x client inquiries', color: '#a78bfa', client: 'PixelForge Studio', duration: '4 weeks', challenge: 'Designing a flexible identity system that works across 50+ brand touchpoints.' },
 ];
 
 function renderPortfolioItem(p, i) {
@@ -20,7 +20,7 @@ function renderPortfolioItem(p, i) {
   const descText = p.description || p.desc;
   const tech = p.technologies || p.tech || ['React', 'Next.js'];
   const metricsText = p.metrics || 'Successful Deployment';
-  const iconText = p.icon || '✦';
+  const iconText = p.icon || 'âœ¦';
   const colorText = p.color || '#7c5cfc';
   const coverImg = p.coverImage || '';
 
@@ -54,7 +54,7 @@ export function renderPortfolio() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Our Work</span>
+          <span class="section-label reveal">âœ¦ Our Work</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Our <span class="gradient-text">Portfolio</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Explore our selected projects and see how we bring ideas to life.</p>
         </div>
@@ -94,7 +94,7 @@ export async function initPortfolio() {
       container.innerHTML = dbProjects.map((p, i) => renderPortfolioItem(p, i)).join('');
     }
   } catch (e) {
-    console.warn('⚠️ Could not fetch portfolio from API, falling back to static mock data.', e);
+    console.warn('âš ï¸ Could not fetch portfolio from API, falling back to static mock data.', e);
   }
 }
 
@@ -107,7 +107,7 @@ export async function initPortfolio() {
   if (!lb || !body) return;
 
   body.innerHTML = `
-    <button class="lightbox-close" onclick="closeProjectLightbox()">✕</button>
+    <button class="lightbox-close" onclick="closeProjectLightbox()">âœ•</button>
     <div class="lightbox-visual" style="background:linear-gradient(135deg, ${p.color}33, ${p.color}11);">
       <span style="font-size:6rem;">${p.icon}</span>
     </div>
@@ -135,12 +135,12 @@ export async function initPortfolio() {
     </div>
     ${p.challenge ? `
       <div style="padding:var(--space-6);background:var(--bg-glass);border:1px solid var(--bg-glass-border);border-radius:var(--radius-lg);margin-bottom:var(--space-6);">
-        <h4 style="font-weight:700;margin-bottom:var(--space-2);font-size:var(--font-size-sm);">💡 The Challenge</h4>
+        <h4 style="font-weight:700;margin-bottom:var(--space-2);font-size:var(--font-size-sm);">ðŸ’¡ The Challenge</h4>
         <p style="color:var(--text-secondary);font-size:var(--font-size-sm);line-height:var(--line-height-relaxed);">${p.challenge}</p>
       </div>
     ` : ''}
     <div style="text-align:center;">
-      <a href="/start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start a Similar Project →</a>
+      <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start a Similar Project â†’</a>
     </div>
   `;
 
@@ -172,3 +172,4 @@ document.addEventListener('keydown', (e) => {
     }
   });
 };
+

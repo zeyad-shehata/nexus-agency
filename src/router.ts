@@ -1,5 +1,5 @@
-// ============================================
-// NEXUS AGENCY — Client-Side Router
+﻿// ============================================
+// NEXUS AGENCY â€” Client-Side Router
 // Premium Edition v2.0
 // ============================================
 
@@ -28,21 +28,21 @@ interface RouteConfig {
 }
 
 const routes: Record<string, RouteConfig> = {
-  '/': { render: renderHome, init: initHomePage, title: 'Nexus Agency — Premium Digital Experiences', description: 'We design and develop premium digital experiences that help businesses grow.' },
-  '/services': { render: renderServices, init: initServices, title: 'Services — Nexus Agency', description: 'End-to-end digital solutions: web development, mobile apps, UI/UX design, branding, AI, and more.' },
-  '/portfolio': { render: renderPortfolio, init: initPortfolio, title: 'Portfolio — Nexus Agency', description: 'Explore our selected projects showcasing expertise in web, mobile, AI, and branding.' },
-  '/contact': { render: renderContact, init: initContact, title: 'Contact — Nexus Agency', description: 'Get in touch with our team. We respond within 24 hours.' },
-  '/faq': { render: renderFAQ, title: 'FAQ — Nexus Agency', description: 'Frequently asked questions about our services, pricing, process, and support.' },
-  '/start-project': { render: renderStartProject, init: initStartProject, title: 'Start Your Project — Nexus Agency', description: 'Tell us about your project and get a free consultation and quote.' },
-  '/blog': { render: renderBlog, init: initBlog, title: 'Blog — Nexus Agency', description: 'Tips, trends, and insights from our team of digital experts.' },
-  '/tracker': { render: renderTracker, init: initTracker, title: 'Project Tracker — Nexus Agency', description: 'Track the progress of your project in real-time.' },
-  '/consultation': { render: renderConsultation, title: 'Book Consultation — Nexus Agency', description: 'Schedule a free consultation to discuss your project needs.' },
-  '/reviews': { render: renderReviews, init: initReviews, title: 'Client Reviews — Nexus Agency', description: 'Read what our clients say about working with Nexus Agency.' },
-  '/estimator': { render: renderEstimator, title: 'Cost Estimator — Nexus Agency', description: 'Get an instant cost estimate for your project based on your requirements.' },
-  '/auth': { render: renderAuth, init: initAuth, title: 'Sign In / Register — Nexus Agency', description: 'Sign in to your Nexus account or create a new one.' },
-  '/signin': { render: renderAuth, init: initAuth, title: 'Sign In / Register — Nexus Agency', description: 'Sign in to your Nexus account.' },
-  '/dashboard': { render: renderDashboard, init: initDashboard, title: 'Dashboard — Nexus Agency', protected: true, description: 'Manage your projects, messages, and account.' },
-  '/admin/dashboard': { render: renderDashboard, init: initDashboard, title: 'Admin Console — Nexus Agency', admin: true, description: 'Admin console for managing the platform.' },
+  '/': { render: renderHome, init: initHomePage, title: 'Nexus Agency â€” Premium Digital Experiences', description: 'We design and develop premium digital experiences that help businesses grow.' },
+  '/services': { render: renderServices, init: initServices, title: 'Services â€” Nexus Agency', description: 'End-to-end digital solutions: web development, mobile apps, UI/UX design, branding, AI, and more.' },
+  '/portfolio': { render: renderPortfolio, init: initPortfolio, title: 'Portfolio â€” Nexus Agency', description: 'Explore our selected projects showcasing expertise in web, mobile, AI, and branding.' },
+  '/contact': { render: renderContact, init: initContact, title: 'Contact â€” Nexus Agency', description: 'Get in touch with our team. We respond within 24 hours.' },
+  '/faq': { render: renderFAQ, title: 'FAQ â€” Nexus Agency', description: 'Frequently asked questions about our services, pricing, process, and support.' },
+  '/start-project': { render: renderStartProject, init: initStartProject, title: 'Start Your Project â€” Nexus Agency', description: 'Tell us about your project and get a free consultation and quote.' },
+  '/blog': { render: renderBlog, init: initBlog, title: 'Blog â€” Nexus Agency', description: 'Tips, trends, and insights from our team of digital experts.' },
+  '/tracker': { render: renderTracker, init: initTracker, title: 'Project Tracker â€” Nexus Agency', description: 'Track the progress of your project in real-time.' },
+  '/consultation': { render: renderConsultation, title: 'Book Consultation â€” Nexus Agency', description: 'Schedule a free consultation to discuss your project needs.' },
+  '/reviews': { render: renderReviews, init: initReviews, title: 'Client Reviews â€” Nexus Agency', description: 'Read what our clients say about working with Nexus Agency.' },
+  '/estimator': { render: renderEstimator, title: 'Cost Estimator â€” Nexus Agency', description: 'Get an instant cost estimate for your project based on your requirements.' },
+  '/auth': { render: renderAuth, init: initAuth, title: 'Sign In / Register â€” Nexus Agency', description: 'Sign in to your Nexus account or create a new one.' },
+  '/signin': { render: renderAuth, init: initAuth, title: 'Sign In / Register â€” Nexus Agency', description: 'Sign in to your Nexus account.' },
+  '/dashboard': { render: renderDashboard, init: initDashboard, title: 'Dashboard â€” Nexus Agency', protected: true, description: 'Manage your projects, messages, and account.' },
+  '/admin/dashboard': { render: renderDashboard, init: initDashboard, title: 'Admin Console â€” Nexus Agency', admin: true, description: 'Admin console for managing the platform.' },
 };
 
 export class Router {
@@ -53,33 +53,53 @@ export class Router {
   }
 
   init() {
-    // Handle link clicks
+    // Handle link clicks and internal navigation
     document.addEventListener('click', (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const link = target.closest('[data-link]') as HTMLAnchorElement;
       if (link) {
         e.preventDefault();
         const href = link.getAttribute('href');
-        if (href && href !== window.location.pathname) {
+        if (href) {
           this.navigate(href);
         }
       }
     });
 
-    // Handle browser back/forward
+    // Handle browser history navigation and hash-based fallback
     window.addEventListener('popstate', () => this.render());
+    window.addEventListener('hashchange', () => this.render());
 
     // Initial render
     this.render();
   }
 
+  private getCurrentPath(): string {
+    const hash = window.location.hash;
+    if (hash.startsWith('#/')) {
+      return hash.slice(1).replace(/\/+$/, '') || '/';
+    }
+
+    const path = window.location.pathname;
+    return path.replace(/\/+$/, '') || '/';
+  }
+
+  private normalizePath(path: string): string {
+    if (!path) return '/';
+    const normalized = path.replace(/\/+$/, '');
+    return normalized || '/';
+  }
+
   navigate(path: string) {
-    window.history.pushState({}, '', path);
+    const normalized = this.normalizePath(path.startsWith('#') ? path.slice(1) : path);
+    if (window.location.pathname !== normalized || window.location.hash.startsWith('#/')) {
+      window.history.pushState({}, '', normalized);
+    }
     this.render();
   }
 
   async render() {
-    const path = window.location.pathname;
+    const path = this.getCurrentPath();
     const route = routes[path] || routes['/'];
 
     // Route Protection logic
@@ -105,7 +125,9 @@ export class Router {
 
     // Update active nav link
     document.querySelectorAll('.nav-link').forEach(link => {
-      link.classList.toggle('active', link.getAttribute('href') === path);
+      const href = link.getAttribute('href') || '';
+      const normalizedHref = href.startsWith('#') ? href.slice(1) : href;
+      link.classList.toggle('active', normalizedHref === path);
     });
 
     // Close mobile menu
@@ -132,3 +154,4 @@ export class Router {
     }, 50);
   }
 }
+

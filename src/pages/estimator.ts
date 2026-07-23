@@ -1,5 +1,5 @@
-// ============================================
-// NEXUS AGENCY — Cost Estimator
+﻿// ============================================
+// NEXUS AGENCY â€” Cost Estimator
 // ============================================
 
 export function renderEstimator() {
@@ -8,7 +8,7 @@ export function renderEstimator() {
       <div class="page-hero-bg"></div>
       <div class="page-hero-content">
         <div class="container">
-          <span class="section-label reveal">✦ Cost Estimator</span>
+          <span class="section-label reveal">âœ¦ Cost Estimator</span>
           <h1 class="section-title reveal reveal-delay-1" style="font-size:var(--font-size-hero);">Project <span class="gradient-text">Estimator</span></h1>
           <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">Get an instant estimate for your project based on your requirements.</p>
         </div>
@@ -105,7 +105,7 @@ export function renderEstimator() {
           </div>
 
           <div style="text-align:center;margin-top:var(--space-8);">
-            <a href="/start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start Your Project →</a>
+            <a href="./start-project" class="btn btn-primary btn-large btn-shimmer" data-link>Start Your Project â†’</a>
           </div>
         </div>
       </div>
@@ -124,7 +124,7 @@ export function renderEstimator() {
   const check = el.querySelector('.est-check') as HTMLElement;
   if (!check) return;
   if (el.classList.contains('selected')) {
-    check.textContent = '✓';
+    check.textContent = 'âœ“';
     check.style.borderColor = 'var(--accent-primary)';
     check.style.background = 'var(--accent-primary)';
     check.style.color = 'white';
@@ -159,3 +159,4 @@ function updateEstimate() {
   const result = document.getElementById('estimate-result');
   if (result) result.textContent = '$' + total.toLocaleString();
 }
+
