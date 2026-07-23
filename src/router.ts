@@ -126,7 +126,7 @@ export class Router {
     // Update active nav link
     document.querySelectorAll('.nav-link').forEach(link => {
       const href = link.getAttribute('href') || '';
-      const normalizedHref = href.startsWith('#') ? href.slice(1) : href;
+      const normalizedHref = this.normalizePath(href.startsWith('#') ? href.slice(1) : href);
       link.classList.toggle('active', normalizedHref === path);
     });
 
