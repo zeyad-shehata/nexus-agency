@@ -93,6 +93,11 @@ export class Router {
     if (!normalized.startsWith('/')) normalized = '/' + normalized;
     return normalized;
   }
+
+  private navigate(path: string) {
+    const normalized = this.normalizePath(path.startsWith('#') ? path.slice(1) : path);
+    const currentPath = this.getCurrentPath();
+    if (currentPath !== normalized) {
       window.history.pushState({}, '', normalized);
     }
     this.render();
