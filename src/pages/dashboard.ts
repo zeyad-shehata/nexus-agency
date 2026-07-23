@@ -61,6 +61,7 @@ export function renderDashboard() {
             <button class="tab-btn" id="btn-tab-chat" onclick="switchDashboardTab('chat')" style="width:100%; text-align:left; justify-content:flex-start;">💬 Support Chat</button>
             ${isAdmin ? `
               <button class="tab-btn" id="btn-tab-cms" onclick="switchDashboardTab('cms')" style="width:100%; text-align:left; justify-content:flex-start;">⚙️ CMS Manager</button>
+              <button class="tab-btn" id="btn-tab-clients" onclick="switchDashboardTab('clients')" style="width:100%; text-align:left; justify-content:flex-start;">👥 Clients</button>
               <button class="tab-btn" id="btn-tab-logs" onclick="switchDashboardTab('logs')" style="width:100%; text-align:left; justify-content:flex-start;">📜 Audit Logs</button>
             ` : `
               <button class="tab-btn" id="btn-tab-notifications" onclick="switchDashboardTab('notifications')" style="width:100%; text-align:left; justify-content:flex-start;">🔔 Notifications <span class="badge" id="noti-unread-count" style="display:none; background:var(--accent-tertiary); margin-left:var(--space-2);">0</span></button>
@@ -128,6 +129,24 @@ export function renderDashboard() {
                 <div id="cms-editor-content"></div>
               </div>
               
+              <div class="db-tab-content" id="tab-content-clients" style="display:none;">
+                <div style="display:flex; flex-direction:column; gap:var(--space-4);">
+                  <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-3);">
+                    <div>
+                      <h3 style="font-weight:800; font-size:var(--font-size-xl); margin:0;">Client Directory</h3>
+                      <p style="color:var(--text-secondary); margin-top:var(--space-2); font-size:var(--font-size-sm);">Quickly view and manage your active customers, contact details, and project status.</p>
+                    </div>
+                    <button class="btn btn-secondary" onclick="loadClientDirectory()" style="padding:var(--space-2) var(--space-4);">Refresh</button>
+                  </div>
+                  <div style="display:grid; grid-template-columns: 1fr 320px; gap:var(--space-4); align-items:start;">
+                    <div class="glass-card" style="padding:var(--space-4); min-height: 360px;" id="client-directory-list">Loading clients...</div>
+                    <div class="glass-card" style="padding:var(--space-4); min-height: 360px;" id="client-directory-detail">
+                      <div style="color:var(--text-secondary);">Select a customer to view their profile and recent activity.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="db-tab-content" id="tab-content-logs" style="display:none;">
                 <h3 style="font-weight:800; font-size:var(--font-size-xl); margin-bottom:var(--space-4);">System Audit Log</h3>
                 <div class="glass-card" style="padding:0; overflow:hidden;">
@@ -206,6 +225,7 @@ export function initDashboard() {
         if (chatContainer) chatContainer.scrollTop = chatContainer.scrollHeight;
       }, 50);
     }
+    if (tabId === 'clients' && user.role === 'ADMIN') loadClientDirectory();
     if (tabId === 'cms' && user.role === 'ADMIN') (window as any).switchCMSTab('services');
     if (tabId === 'logs' && user.role === 'ADMIN') loadAuditLogs();
     if (tabId === 'notifications' && user.role !== 'ADMIN') loadNotifications();
@@ -753,13 +773,14 @@ async function loadProjects(user) {
             <h3 style="font-weight:800; font-size:var(--font-size-lg); margin:0;">${p.title}</h3>
             <span style="font-size:var(--font-size-xs); color:var(--text-secondary);">ID: ${p.id}</span>
           </div>
-          <div style="display:flex; align-items:center; gap:var(--space-2);">
+          <div style="display:flex; align-items:center; gap:var(--space-2); flex-wrap:wrap;">
             ${user.role === 'ADMIN' ? `
               <select class="form-select form-input" style="padding:var(--space-1) var(--space-2); font-size:var(--font-size-xs);" onchange="updateProjectStatusDirect('${p.id}', this.value)">
                 ${['Under Review', 'Approved', 'Discovery', 'Design', 'Development', 'Testing', 'Completed', 'Cancelled'].map(status => `
                   <option value="${status}" ${p.status === status ? 'selected' : ''}>${status}</option>
                 `).join('')}
               </select>
+              <button class="btn btn-secondary" onclick="showCustomerDetails('${p.client?.id || ''}')" style="padding:var(--space-1) var(--space-3); font-size:var(--font-size-xs);">View Client</button>
               <button class="btn btn-secondary" onclick="deleteProjectDirect('${p.id}')" style="border-color:var(--accent-tertiary); color:var(--accent-tertiary); padding:var(--space-1) var(--space-3); font-size:var(--font-size-xs);">Delete</button>
             ` : `
               <span class="badge badge-green">${p.status}</span>
@@ -871,6 +892,76 @@ async function loadProjects(user) {
     loading.textContent = `Error: ${err.message}`;
   }
 }
+
+let cachedClientDirectory = [];
+let selectedClientId = '';
+
+async function loadClientDirectory() {
+  const listContainer = document.getElementById('client-directory-list');
+  const detailContainer = document.getElementById('client-directory-detail');
+  if (!listContainer || !detailContainer) return;
+
+  listContainer.innerHTML = '<div class="loader-spinner">Loading clients...</div>';
+  detailContainer.innerHTML = '<div style="color:var(--text-secondary);">Select a customer to view their profile and project details.</div>';
+
+  try {
+    const res = await apiFetch('/admin/users');
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Failed to load clients.');
+
+    cachedClientDirectory = Array.isArray(data.users) ? data.users : data.users || [];
+    if (cachedClientDirectory.length === 0) {
+      listContainer.innerHTML = '<div style="color:var(--text-secondary);">No customers found yet.</div>';
+      return;
+    }
+
+    listContainer.innerHTML = cachedClientDirectory.map(client => `
+      <div class="glass-card" style="padding:var(--space-3); margin-bottom:var(--space-2); display:flex; justify-content:space-between; align-items:center; gap:var(--space-3);">
+        <div style="min-width:0;">
+          <div style="font-weight:700;">${sanitizeHTML(client.name || 'Unnamed')}</div>
+          <div style="font-size:var(--font-size-xs); color:var(--text-secondary);">${sanitizeHTML(client.email)}</div>
+        </div>
+        <button class="btn btn-secondary" onclick="showCustomerDetails('${client.id}')" style="padding:var(--space-1) var(--space-3); font-size:var(--font-size-xs);">Show</button>
+      </div>
+    `).join('');
+  } catch (err) {
+    listContainer.innerHTML = `<div style="color:var(--accent-danger);">${err.message}</div>`;
+    console.error(err);
+  }
+}
+
+window.showCustomerDetails = function(id) {
+  const detailContainer = document.getElementById('client-directory-detail');
+  if (!detailContainer) return;
+
+  selectedClientId = id;
+  const client = cachedClientDirectory.find(c => c.id === id);
+  if (!client) {
+    detailContainer.innerHTML = '<div style="color:var(--accent-danger);">Customer information not available. Please refresh the directory.</div>';
+    return;
+  }
+
+  detailContainer.innerHTML = `
+    <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:var(--space-3); flex-wrap:wrap;">
+      <div>
+        <div style="font-size:var(--font-size-xl); font-weight:800;">${sanitizeHTML(client.name)}</div>
+        <div style="font-size:var(--font-size-sm); color:var(--text-secondary);">${sanitizeHTML(client.email)}</div>
+      </div>
+      <span class="badge" style="background:var(--accent-secondary);">${sanitizeHTML(client.role)}</span>
+    </div>
+    <div style="margin-top:var(--space-4); display:grid; grid-template-columns:1fr; gap:var(--space-3);">
+      <div style="background:rgba(255,255,255,0.03); padding:var(--space-3); border-radius:var(--radius-sm);">
+        <div style="font-weight:700; margin-bottom:var(--space-1);">Contact</div>
+        <div style="font-size:var(--font-size-sm); color:var(--text-secondary);">Phone: ${sanitizeHTML(client.phone || 'Not provided')}</div>
+        <div style="font-size:var(--font-size-sm); color:var(--text-secondary);">Member since: ${new Date(client.createdAt).toLocaleDateString()}</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.03); padding:var(--space-3); border-radius:var(--radius-sm);">
+        <div style="font-weight:700; margin-bottom:var(--space-1);">Quick Actions</div>
+        <button class="btn btn-primary" onclick="window.location.href='/dashboard'" style="width:100%; padding:var(--space-2);">View full dashboard</button>
+      </div>
+    </div>
+  `;
+};
 
 // NOTIFICATIONS
 async function loadNotifications() {
