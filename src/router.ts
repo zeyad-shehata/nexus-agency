@@ -86,13 +86,13 @@ export class Router {
 
   private normalizePath(path: string): string {
     if (!path) return '/';
-    const normalized = path.replace(/\/+$/, '');
-    return normalized || '/';
+    let normalized = path.trim();
+    normalized = normalized.replace(/^\./, '');
+    normalized = normalized.replace(/\/+$/, '');
+    if (!normalized) return '/';
+    if (!normalized.startsWith('/')) normalized = '/' + normalized;
+    return normalized;
   }
-
-  navigate(path: string) {
-    const normalized = this.normalizePath(path.startsWith('#') ? path.slice(1) : path);
-    if (window.location.pathname !== normalized || window.location.hash.startsWith('#/')) {
       window.history.pushState({}, '', normalized);
     }
     this.render();
